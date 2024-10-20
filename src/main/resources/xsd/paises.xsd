@@ -4,6 +4,8 @@
            targetNamespace="http://www.cibertec.edu.pe/ws/objects"
            elementFormDefault="qualified">
 
+    <!-- En targetNamespace estamos diciendo cuando compilamos las clases, repetara cibertec>edu>pe>ws>objects> clases -->
+
     <!-- Definir una clase getPaisRequest con un atributo nombre -->
     <xs:element name="getPaisRequest">
         <xs:complexType>

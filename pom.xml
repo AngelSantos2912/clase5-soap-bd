@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>3.3.4</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>pe.edu.cibertec</groupId>
 	<artifactId>ws-soap-bd</artifactId>
@@ -82,6 +82,27 @@
 							<artifactId>lombok</artifactId>
 						</exclude>
 					</excludes>
+				</configuration>
+			</plugin>
+			<!-- tomar referencia paises.xsd y va a crear las clases java -->
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>jaxb2-maven-plugin</artifactId>
+				<version>3.1.0</version>
+				<executions>
+					<execution>
+						<id>xjc</id>
+						<goals>
+							<goal>xjc</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<sources>
+						<source>${project.basedir}/src/main/resources/xsd/paises.xsd</source> <!-- lo que va a ejecutar -->
+					</sources>
+					<outputDirectory>src/main/java</outputDirectory><!-- en donde se va a guardar las clases del xsd -->
+					<clearOutputDir>false</clearOutputDir> <!-- si lo dejamos en true, va a borrar todo, si es false, si ya existe lo deja y genera otro -->
 				</configuration>
 			</plugin>
 		</plugins>

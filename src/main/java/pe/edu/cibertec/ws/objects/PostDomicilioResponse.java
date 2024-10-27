@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
 // Visite https://eclipse-ee4j.github.io/jaxb-ri 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2024.10.27 a las 10:25:51 AM PET 
+// Generado el: 2024.10.27 a las 10:26:33 AM PET 
 //
 
 
@@ -25,7 +25,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="domicilio" type="{http://www.cibertec.edu.pe/ws/objects}domiciliosoap"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +36,36 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "nombre"
+    "domicilio"
 })
-@XmlRootElement(name = "getPaisRequest")
-public class GetPaisRequest {
+@XmlRootElement(name = "postDomicilioResponse")
+public class PostDomicilioResponse {
 
     @XmlElement(required = true)
-    protected String nombre;
+    protected Domiciliosoap domicilio;
 
     /**
-     * Obtiene el valor de la propiedad nombre.
+     * Obtiene el valor de la propiedad domicilio.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link Domiciliosoap }
      *     
      */
-    public String getNombre() {
-        return nombre;
+    public Domiciliosoap getDomicilio() {
+        return domicilio;
     }
 
     /**
-     * Define el valor de la propiedad nombre.
+     * Define el valor de la propiedad domicilio.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link Domiciliosoap }
      *     
      */
-    public void setNombre(String value) {
-        this.nombre = value;
+    public void setDomicilio(Domiciliosoap value) {
+        this.domicilio = value;
     }
 
 }

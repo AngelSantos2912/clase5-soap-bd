@@ -103,7 +103,7 @@
 				</executions>
 				<configuration>
 					<sources>
-						<source>${project.basedir}/src/main/resources/xsd/paises.xsd</source> <!-- lo que va a ejecutar -->
+						<source>${project.basedir}/src/main/resources/xsd/domicilio.xsd</source> <!-- lo que va a ejecutar -->
 					</sources>
 					<outputDirectory>src/main/java</outputDirectory><!-- en donde se va a guardar las clases del xsd -->
 					<clearOutputDir>false</clearOutputDir> <!-- si lo dejamos en true, va a borrar todo, si es false, si ya existe lo deja y genera otro -->

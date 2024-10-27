@@ -2,7 +2,7 @@
 // Este archivo ha sido generado por Eclipse Implementation of JAXB v3.0.0 
 // Visite https://eclipse-ee4j.github.io/jaxb-ri 
 // Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
-// Generado el: 2024.10.27 a las 10:25:51 AM PET 
+// Generado el: 2024.10.27 a las 10:26:33 AM PET 
 //
 
 
@@ -10,7 +10,6 @@ package pe.edu.cibertec.ws.objects;
 
 import jakarta.xml.bind.annotation.XmlAccessType;
 import jakarta.xml.bind.annotation.XmlAccessorType;
-import jakarta.xml.bind.annotation.XmlElement;
 import jakarta.xml.bind.annotation.XmlRootElement;
 import jakarta.xml.bind.annotation.XmlType;
 
@@ -25,7 +24,7 @@ import jakarta.xml.bind.annotation.XmlType;
  *   &lt;complexContent&gt;
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
  *       &lt;sequence&gt;
- *         &lt;element name="nombre" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="id" type="{http://www.w3.org/2001/XMLSchema}int"/&gt;
  *       &lt;/sequence&gt;
  *     &lt;/restriction&gt;
  *   &lt;/complexContent&gt;
@@ -36,36 +35,27 @@ import jakarta.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "", propOrder = {
-    "nombre"
+    "id"
 })
-@XmlRootElement(name = "getPaisRequest")
-public class GetPaisRequest {
+@XmlRootElement(name = "getDomicilioRequest")
+public class GetDomicilioRequest {
 
-    @XmlElement(required = true)
-    protected String nombre;
+    protected int id;
 
     /**
-     * Obtiene el valor de la propiedad nombre.
+     * Obtiene el valor de la propiedad id.
      * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
      */
-    public String getNombre() {
-        return nombre;
+    public int getId() {
+        return id;
     }
 
     /**
-     * Define el valor de la propiedad nombre.
+     * Define el valor de la propiedad id.
      * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
      */
-    public void setNombre(String value) {
-        this.nombre = value;
+    public void setId(int value) {
+        this.id = value;
     }
 
 }

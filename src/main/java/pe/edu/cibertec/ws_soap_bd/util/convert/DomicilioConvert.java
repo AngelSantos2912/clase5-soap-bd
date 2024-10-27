@@ -38,7 +38,7 @@ public class DomicilioConvert {
         return list;
     }
 
-    public List<Domiciliosoap> convertDomicilioSoapBdList(List<Domicilio> domicilios) {
+    public List<Domiciliosoap> convertDomicilioSoapList(List<Domicilio> domicilios) {
         List<Domiciliosoap> list = new ArrayList<>();
         for (Domicilio domicilio : domicilios) {
             list.add(convertDomiciliosoap(domicilio));

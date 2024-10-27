@@ -8,20 +8,20 @@ import org.springframework.xml.xsd.SimpleXsdSchema;
 import org.springframework.xml.xsd.XsdSchema;
 
 @Configuration
-public class PaisWsdlConfig {
+public class DomicilioWsdlConfig {
 
-    @Bean(name = "paises")
-    public DefaultWsdl11Definition paisWsdl(XsdSchema paisEsquema) {
+    @Bean(name = "domicilios")
+    public DefaultWsdl11Definition domicilioWsdl(XsdSchema domicilioEsquema) {
         DefaultWsdl11Definition wsdl11Definition = new DefaultWsdl11Definition();
-        wsdl11Definition.setPortTypeName("PaisesPort");
-        wsdl11Definition.setLocationUri("/ws/paises");
+        wsdl11Definition.setPortTypeName("DomicilioPort");
+        wsdl11Definition.setLocationUri("/ws/domicilio");
         wsdl11Definition.setTargetNamespace("http://www.cibertec.edu.pe/ws/objects");
-        wsdl11Definition.setSchema(paisEsquema);
+        wsdl11Definition.setSchema(domicilioEsquema);
         return wsdl11Definition;
     }
 
     @Bean
-    public XsdSchema paisEsquema() {
-        return new SimpleXsdSchema(new ClassPathResource("xsd/paises.xsd"));//busca el directorio y busca el archivo xsd
+    public XsdSchema domicilioEsquema() {
+        return new SimpleXsdSchema(new ClassPathResource("xsd/domicilio.xsd"));//busca el directorio y busca el archivo xsd
     }
 }
